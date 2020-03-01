@@ -1,0 +1,65 @@
+html{
+	height:100%;
+}
+
+#grad{
+	/* background-image: linear-gradient(to bottom, #f5e000,#62b2fc); */
+	background-size: 100% 100%;
+	background-color: beige;
+}
+img.purchaseSection{
+	width:400px;
+	margin-top: 25px;
+}
+div.images{
+	width:400px;
+	height:400px;
+	position: relative;
+	margin-left: 50px;
+	margin-bottom:120px;
+
+}
+div.classydiv{
+	border:thick solid red;
+	width:500px;
+	height:400px;
+	left:500px;
+	top:0px;
+	position: absolute;
+	margin-top:30px;
+
+}
+div.reviewArea{
+	width:100%;
+	height:200px;
+	border: thick solid yellow;
+	position:relative;
+	margin-right: 15px;
+
+}
+div.relatedProducts{
+	width:100%;
+	height:300px;
+	border: thick solid purple;
+	margin-top:10px;
+	position: relative;
+}
+div.product{
+	height:100%;
+	border:thick solid black;
+	float: left;
+}
+button.purchaseButton{
+	height:30px; 
+	margin-top: 20px;
+    width:100px; 
+    position:relative;
+	top:30px;
+
+}
+button.addtoCart{
+	margin-top: 30px;
+	position: relative;
+	left: 250px;
+}
+
