@@ -5,20 +5,26 @@
     <meta name="viewport" content="width=device-width">
     <title>IC Chip Shop</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="script.js"></script>
+
   </head>
+
   <body onload = "initialize();" id="grad">
-    <script src="script.js"></script>
 
     <div class ="images">
 	    <img class="purchaseSection" src="IC_Banner.jpg">
-	    <img class="purchaseSection" src="output-onlinepngtools.png">
+        <h2 ><span id="nameOfProd">NOT Gate</span></h2>
+        <img class="purchaseProduct" id="productPic" src="output-onlinepngtools.png">
+	    
     </div>
     <div class="classydiv">
+
     <p>The 74LS04 IC chip also known as the hex inverter has 6 inputs with 6 outputs and is used to switch the input signal. For example, sending a 1 through VCC into the input will get a 0 as its correlated output. A signal of 0 through ground as the input will output 1 VCC. 
     </p>
 
 
-      <button onclick="addCart();">Add to Cart</button> 
+      <button onclick="changeCart('add');">Add to Cart</button> 
+      <button onclick="changeCart('subtract');">Delete from Cart</button> 
       <select id ="amount" name="amount">
         <option value="3">3 pack</option>
         <option value="5">5 pack</option>
@@ -26,20 +32,22 @@
         <option value="10">10 pack</option>
       </select> 
       <select id="whichChip" name="whichChip">
-        <option value="AND">74LS08(AND GATE)</option>
-        <option value="NOT">74LS04(NOT GATE)</option>
-        <option value="OR">74LS32(OR GATE)</option>
+        <option  id="5VOPTION" value="NOT5VOLT">74LS08(NOT GATE, 5VOLT)</option>
+        <option  id="12VOPTION" value="NOT12VOLT">74LS04(NOT GATE, 12VOLT)</option>
       </select>
       <h2>Current Cart</h2>
-      <p id="cartId">None<br>
-        something</p>
-      <button class="purchaseButton">Purchase</button>
+      <p id="cartId">
+        Cart:Empty <br/>
+
+        </p>
+      <button onclick="emptyCart();" class="purchaseButton">Purchase</button>
       
     </form>
     </div>
 
-    <h1 style="margin-top: 10px;">Review Section</h1>
+    <h1 >Review Section</h1>
     <div class="reviewArea">
+        <h2>Review Rating: 3</h2>
       <p>On on produce colonel pointed. Just four sold need over how any. In to september suspicion determine he prevailed admitting. On adapted an as affixed limited on. Giving cousin warmly things no spring mr be abroad. Relation breeding be as repeated strictly followed margaret. One gravity son brought shyness waiting regular led ham. 
 
         Lose john poor same it case do year we. Full how way even the sigh. Extremely nor furniture fat questions now provision incommode preserved. Our side fail find like now. Discovered travelling for insensible partiality unpleasing impossible she. Sudden up my excuse to suffer ladies though or. Bachelor possible marianne directly confined relation as on he. 
@@ -50,6 +58,8 @@
         </p>
     </div>
     <div class="reviewArea">
+        <h2>Review Rating: 4</h2>
+
       <p>        
         Betrayed cheerful declared end and. Questions we additions is extremely incommode. Next half add call them eat face. Age lived smile six defer bed their few. Had admitting concluded too behaviour him she. Of death to or to being other. 
         
@@ -59,15 +69,32 @@
         </p>
     </div>
     <div class="reviewArea">
+                <h2>Review Rating: 5</h2>
+
       <p>You disposal strongly quitting his endeavor two settling him. Manners ham him hearted hundred expense. Get open game him what hour more part. Adapted as smiling of females oh me journey exposed concern. Met come add cold calm rose mile what. Tiled manor court at built by place fanny. Discretion at be an so decisively especially. Exeter itself object matter if on mr in. 
         
         Certain but she but shyness why cottage. Gay the put instrument sir entreaties affronting. Pretended exquisite see cordially the you. Weeks quiet do vexed or whose. Motionless if no to affronting imprudence no precaution. My indulged as disposal strongly attended. Parlors men express had private village man. Discovery moonlight recommend all one not. Indulged to answered prospect it bachelor is he bringing shutters. Pronounce forfeited mr direction oh he dashwoods ye unwilling. 
  </p>
     </div>
     <div id="submitReview" class="reviewArea">
-      <form>
+      <form id="reviewNumber">
+          <span>Review 1-5: </span>
+          <input id="one" type="radio" name="reviewNum" value=1>
+            <label for="one">1</label>
+          <input type="radio" name="reviewNum" value=2>            
+          <label for="two">2</label>
+          <input type="radio" name="reviewNum" value=3>
+          <label for="three">3</label>
+
+          <input type="radio" name="reviewNum" value=4>
+          <label for="four">4</label>
+
+          <input type="radio" name="reviewNum" value=5>
+          <label for="five">5</label>
+
+
         <p>
-          <textarea style="resize: none;" rows="8" cols="110" id = "userReview"> Your text here</textarea>
+          <textarea style="resize: none;" rows="6" cols="130" id = "userReview"> Your text here</textarea>
         </p>
         <button  onclick="addReview();" type="button">Submit</button>
         <p></p>
@@ -78,10 +105,18 @@
     <h1>Related Products</h1>
     <div class="relatedProducts">
 
-      <div class="product">This is a related product</div>
-      <div class="product">This is a related product</div>
-      <div class="product">This is a related product</div>
-      <div class="product">This is a related product</div>
+      <div id="product"><span id="NAND">NAND Gate <br/></span>      <img id="productOne" onclick="updatePage('productOne','NAND');" src="74ls00.png" />
+
+      </div>
+      <div id="product"><span id="XOR">XOR GATE<br/></span>
+          <img id="productTwo" onclick="updatePage('productTwo');" src="74ls86n.png"/>
+      </div>
+      <div id="product"><span id="NOR">NOR GATE<br/></span>
+          <img id="productThree" onclick="updatePage('productThree');" src="74ls02-nor-gate-ic.png"/>
+      </div>
+      <div id="product"><span id="XNOR">XNOR GATE<br/></span>
+          <img id="productFour" onclick="updatePage('productFour');" src="xnorgate.png"/>
+      </div>
 
     </div>
   </body>
