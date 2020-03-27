@@ -18,8 +18,8 @@
 	    
     </div>
     <div class="classydiv">
-
-    <p>The 74LS04 IC chip also known as the hex inverter has 6 inputs with 6 outputs and is used to switch the input signal. For example, sending a 1 through VCC into the input will get a 0 as its correlated output. A signal of 0 through ground as the input will output 1 VCC. 
+    <div id="space">
+    <p id="description">The 74LS04 IC chip also known as the hex inverter has 6 inputs with 6 outputs and is used to switch the input signal. For example, sending a 1 through VCC into the input will get a 0 as its correlated output. A signal of 0 through ground as the input will output 1 VCC. 
     </p>
 
 
@@ -36,6 +36,9 @@
         <option  id="12VOPTION" value="NOT12VOLT">74LS04(NOT GATE, 12VOLT)</option>
       </select>
       <h2>Current Cart</h2>
+      <span class="spacedLeft" id="5VOLTPRICE">Price For 5VOLT Version: </span><br/>
+      <span class="spacedLeft" id="12VOLTPRICE">Price For 12VOLT Version: </span>
+
       <p id="cartId">
         Cart:Empty <br/>
 
@@ -44,41 +47,23 @@
       
     </form>
     </div>
+    </div>
 
     <h1 >Review Section</h1>
-    <div class="reviewArea">
-        <h2>Review Rating: 3</h2>
-      <p>On on produce colonel pointed. Just four sold need over how any. In to september suspicion determine he prevailed admitting. On adapted an as affixed limited on. Giving cousin warmly things no spring mr be abroad. Relation breeding be as repeated strictly followed margaret. One gravity son brought shyness waiting regular led ham. 
 
-        Lose john poor same it case do year we. Full how way even the sigh. Extremely nor furniture fat questions now provision incommode preserved. Our side fail find like now. Discovered travelling for insensible partiality unpleasing impossible she. Sudden up my excuse to suffer ladies though or. Bachelor possible marianne directly confined relation as on he. 
-        
-        
-        Be at miss or each good play home they. It leave taste mr in it fancy. She son lose does fond bred gave lady get. Sir her company conduct expense bed any. Sister depend change off piqued one. Contented continued any happiness instantly objection yet her allowance. Use correct day new brought tedious. By come this been in. Kept easy or sons my it done. 
+    <div id="revOne" class="reviewArea">
 
-        </p>
     </div>
-    <div class="reviewArea">
-        <h2>Review Rating: 4</h2>
+    <div id="revTwo" class="reviewArea">
 
-      <p>        
-        Betrayed cheerful declared end and. Questions we additions is extremely incommode. Next half add call them eat face. Age lived smile six defer bed their few. Had admitting concluded too behaviour him she. Of death to or to being other. 
-        
-        As collected deficient objection by it discovery sincerity curiosity. Quiet decay who round three world whole has mrs man. Built the china there tried jokes which gay why. Assure in adieus wicket it is. But spoke round point and one joy. Offending her moonlight men sweetness see unwilling. Often of it tears whole oh balls share an. 
-        
-        
-        </p>
     </div>
-    <div class="reviewArea">
-                <h2>Review Rating: 5</h2>
+    <div id="revThree" class="reviewArea">
 
-      <p>You disposal strongly quitting his endeavor two settling him. Manners ham him hearted hundred expense. Get open game him what hour more part. Adapted as smiling of females oh me journey exposed concern. Met come add cold calm rose mile what. Tiled manor court at built by place fanny. Discretion at be an so decisively especially. Exeter itself object matter if on mr in. 
-        
-        Certain but she but shyness why cottage. Gay the put instrument sir entreaties affronting. Pretended exquisite see cordially the you. Weeks quiet do vexed or whose. Motionless if no to affronting imprudence no precaution. My indulged as disposal strongly attended. Parlors men express had private village man. Discovery moonlight recommend all one not. Indulged to answered prospect it bachelor is he bringing shutters. Pronounce forfeited mr direction oh he dashwoods ye unwilling. 
- </p>
     </div>
     <div id="submitReview" class="reviewArea">
+        <div id="spaced">
       <form id="reviewNumber">
-          <span>Review 1-5: </span>
+          <span id="spaceReviewAdd">Review 1-5: </span>
           <input id="one" type="radio" name="reviewNum" value=1>
             <label for="one">1</label>
           <input type="radio" name="reviewNum" value=2>            
@@ -99,23 +84,24 @@
         <button  onclick="addReview();" type="button">Submit</button>
         <p></p>
       </form>
+      </div>
     </div>
-  
+
 
     <h1>Related Products</h1>
-    <div class="relatedProducts">
+    <div id="spaced" class="relatedProducts">
 
-      <div id="product"><span id="NAND">NAND Gate <br/></span>      <img id="productOne" onclick="updatePage('productOne','NAND');" src="74ls00.png" />
+      <div id="product"><span class="Related" id="NAND">NAND Gate <br/></span>      <img id="productOne" onclick="updatePage(this,'NAND');" src="74ls00.png" />
 
       </div>
-      <div id="product"><span id="XOR">XOR GATE<br/></span>
-          <img id="productTwo" onclick="updatePage('productTwo');" src="74ls86n.png"/>
+      <div id="product"><span class="Related" id="XOR">XOR GATE<br/></span>
+          <img id="productTwo" onclick="updatePage(this,'XOR');" src="74ls86n.png"/>
       </div>
-      <div id="product"><span id="NOR">NOR GATE<br/></span>
-          <img id="productThree" onclick="updatePage('productThree');" src="74ls02-nor-gate-ic.png"/>
+      <div id="product"><span class="Related" id="NOR">NOR GATE<br/></span>
+          <img id="productThree" onclick="updatePage(this,'NOR');" src="74ls02-nor-gate-ic.png"/>
       </div>
-      <div id="product"><span id="XNOR">XNOR GATE<br/></span>
-          <img id="productFour" onclick="updatePage('productFour');" src="xnorgate.png"/>
+      <div id="product"><span class="Related" id="XNOR">XNOR GATE<br/></span>
+          <img id="productFour" onclick="updatePage(this,'XNOR');" src="xnorgate.png"/>
       </div>
 
     </div>
